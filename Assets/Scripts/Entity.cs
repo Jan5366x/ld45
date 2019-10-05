@@ -8,12 +8,24 @@ public class Entity : MonoBehaviour
 
     public void TakeDamage(Weapon weapon)
     {
-        health -= weapon.amount;
+        int damage = weapon.amount;
+        Armor armor = GetComponentInChildren<Armor>();
+        
+        if (armor)
+        {
+            damage = (int) (damage * armor.damagePercentage / 100f);
+        }
 
-        Transform damageTaken = Resources.Load<Transform>("Objects/DamageTaken");
-        Transform newTransform = Instantiate(damageTaken, transform);
-        newTransform.Translate(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-        //TODO: Play some animations / sound / whatever
+        Debug.Log("+++++"+armor+" "+ damage);
+        if (damage > 0)
+        {
+            health -= damage;
+
+            Transform damageTaken = Resources.Load<Transform>("Objects/DamageTaken");
+            Transform newTransform = Instantiate(damageTaken, transform);
+            newTransform.Translate(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+            //TODO: Play some animations / sound / whatever
+        }
     }
 
     public void Heal(int amount)
