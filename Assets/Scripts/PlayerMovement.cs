@@ -24,32 +24,59 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidbody.velocity = Vector2.zero;
         }
+
+        bool idle = Mathf.Approximately(vertical, 0f) && Mathf.Approximately(horizontal, 0f);
+
+        bool right = horizontal > 0;
+        bool left = horizontal < 0;
+        bool forward = vertical < 0;
+        bool backward = vertical > 0;
+
+        int direction = forward ? 0 : left ? 1 : backward ? 2 : 3;
+
+        foreach (Animator animator in GetComponentsInChildren<Animator>())
+        {
+            if (idle)
+            {
+                animator.SetBool("Idle", true);
+            }
+            else
+            {
+                animator.SetBool("Idle", false);
+                animator.SetInteger("Direction", direction);
+            }
+
+            Debug.Log(animator.parameters);
+        }
+
+        Weapon weapon = GetComponentInChildren<Weapon>();
+
+        if (weapon)
+        {
+            if (!idle)
+            {
+                switch (direction)
+                {
+                    case 0:
+                        weapon.transform.SetParent(transform.Find("HandForwards"), false);
+                        break;
+                    case 1:
+                        weapon.transform.SetParent(transform.Find("HandLeft"), false);
+                        break;
+                    case 2:
+                        weapon.transform.SetParent(transform.Find("HandBackwards"), false);
+                        break;
+                    case 3:
+                        weapon.transform.SetParent(transform.Find("HandRight"), false);
+                        break;
+                }
+            }
+        }
     }
 
     private void Update()
     {
         float vertical = Input.GetAxis("Vertical");
         bool forwards = vertical <= 0;
-
-        foreach (Animator animator in GetComponentsInChildren<Animator>())
-        {
-            Debug.Log(animator.parameters);
-            animator.SetBool("Forwards", forwards);
-        }
-
-
-        Weapon weapon = GetComponentInChildren<Weapon>();
-
-        if (weapon)
-        {
-            if (forwards)
-            {
-                weapon.transform.SetParent(transform.Find("HandForwards"), false);
-            }
-            else
-            {
-                weapon.transform.SetParent(transform.Find("HandBackwards"), false);
-            }
-        }
     }
 }
