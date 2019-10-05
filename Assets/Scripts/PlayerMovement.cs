@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,9 +25,23 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.velocity = Vector2.zero;
         }
 
+        bool forwards = vertical <= 0;
+        
         foreach (Animator animators in GetComponentsInChildren<Animator>())
         {
-            animators.SetBool("Forwards", vertical <= 0);
-        } 
+            animators.SetBool("Forwards", forwards);
+        }
+        
+
+        Weapon weapon = GetComponentInChildren<Weapon>();
+
+        if (forwards)
+        {
+            weapon.transform.SetParent(transform.Find("HandForwards"), false);
+        }
+        else
+        {
+            weapon.transform.SetParent(transform.Find("HandBackwards"), false);
+        }
     }
 }

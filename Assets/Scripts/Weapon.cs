@@ -13,14 +13,21 @@ public class Weapon : MonoBehaviour
 
     public void UseOn(Entity entity)
     {
-        if ((entity.transform.position - transform.position).magnitude > range)
+        if (entity)
         {
-            return;
+            if ((entity.transform.position - transform.position).magnitude > range)
+            {
+                return;
+            }
         }
 
         if (coolDownTimer < 0)
         {
-            entity.TakeDamage(this);
+            if (entity)
+            {
+                entity.TakeDamage(this);
+            }
+
             used = true;
         }
     }

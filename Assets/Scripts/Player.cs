@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
                         }
                     }
                 }
+                weapon.UseOn(null);
             }
         }
         
