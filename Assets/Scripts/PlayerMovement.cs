@@ -26,5 +26,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidbody.velocity = Vector2.zero;
         }
+
+        GetComponent<Animator>().SetBool("Forwards", vertical <= 0); 
     }
 }

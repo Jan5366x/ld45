@@ -16,14 +16,13 @@ public class Entity : MonoBehaviour
             damage = (int) (damage * armor.damagePercentage / 100f);
         }
 
-        Debug.Log("+++++"+armor+" "+ damage);
         if (damage > 0)
         {
             health -= damage;
 
             Transform damageTaken = Resources.Load<Transform>("Objects/DamageTaken");
             Transform newTransform = Instantiate(damageTaken, transform);
-            newTransform.Translate(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+            newTransform.Translate(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
             //TODO: Play some animations / sound / whatever
         }
     }

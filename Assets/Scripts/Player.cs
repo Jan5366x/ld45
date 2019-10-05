@@ -14,18 +14,21 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Weapon weapon = GetComponentInParent<Weapon>();
-            float range = weapon.range;
-            var position = transform.position;
-            Collider2D[] hitEntities = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y), range);
-            foreach (var hitEntity in hitEntities)
+            Weapon weapon = GetComponentInChildren<Weapon>();
+            if (weapon)
             {
-                if (!hitEntity.gameObject.GetComponent<Player>())
+                float range = weapon.range;
+                var position = transform.position;
+                Collider2D[] hitEntities = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y), range);
+                foreach (var hitEntity in hitEntities)
                 {
-                    Entity entity = hitEntity.gameObject.GetComponent<Entity>();
-                    if (entity)
+                    if (!hitEntity.gameObject.GetComponent<Player>())
                     {
-                        weapon.UseOn(entity);
+                        Entity entity = hitEntity.gameObject.GetComponent<Entity>();
+                        if (entity)
+                        {
+                            weapon.UseOn(entity);
+                        }
                     }
                 }
             }
