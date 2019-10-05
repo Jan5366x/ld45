@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
+    public float width = 200;
+    public float height = 20;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +22,10 @@ public class HealthBar : MonoBehaviour
         Entity entity = transform.parent.GetComponent<Entity>();
         if (entity)
         {
-            var pos = Camera.main.WorldToScreenPoint(entity.transform.position);
-            Rect rect = new Rect(pos.x - 100, Camera.main.pixelHeight - pos.y, 200, 20);
+            var pos = Camera.main.WorldToScreenPoint(transform.position);
+            Rect rect = new Rect(pos.x - 100, Camera.main.pixelHeight - pos.y, width, height);
             IMUIHelper.DrawFilledBorderRect(rect, 1, entity.health / (float) entity.maxHealth, Color.black,
-                Color.green);    
+                Color.green);
         }
     }
 }

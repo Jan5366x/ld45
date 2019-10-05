@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Weapon weapon = GetComponentInParent<Weapon>();
-            float range = weapon ? weapon.range : 1;
+            float range = weapon.range;
             var position = transform.position;
             Collider2D[] hitEntities = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y), range);
             foreach (var hitEntity in hitEntities)
