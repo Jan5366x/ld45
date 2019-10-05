@@ -362,6 +362,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 409c931755aa8144ca71eaf459b1624d, type: 3}
+--- !u!1001 &457527410779886367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 457527411265620005, guid: a720f6c107ff2ef46bab5c0992b61cb5,
+        type: 3}
+      propertyPath: m_Name
+      value: Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 457527411265620000, guid: a720f6c107ff2ef46bab5c0992b61cb5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 457527411265620000, guid: a720f6c107ff2ef46bab5c0992b61cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457527411265620000, guid: a720f6c107ff2ef46bab5c0992b61cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457527411265620000, guid: a720f6c107ff2ef46bab5c0992b61cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457527411265620001, guid: a720f6c107ff2ef46bab5c0992b61cb5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a720f6c107ff2ef46bab5c0992b61cb5, type: 3}
 --- !u!1001 &552743702978074412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,6 +640,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1794102489344132347, guid: 8b95e4cd35692264aaabcd66489b3d38,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 457527411265620005, guid: a720f6c107ff2ef46bab5c0992b61cb5,
+        type: 3}
     - target: {fileID: 1374813844903678095, guid: 8b95e4cd35692264aaabcd66489b3d38,
         type: 3}
       propertyPath: m_Icon

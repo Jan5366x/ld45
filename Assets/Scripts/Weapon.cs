@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
         {
             if (entity)
             {
-                entity.TakeDamage(this);
+                entity.TakeDamage(amount);
             }
 
             used = true;
