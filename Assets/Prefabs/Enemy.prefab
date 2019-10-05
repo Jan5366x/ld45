@@ -206,8 +206,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 100
-  m_LinearDrag: 10
-  m_AngularDrag: 1000000
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -226,10 +226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08bb02c00adae0f40995814000378f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 700
-  minDistance: 5
-  maxDistance: 20
-  sensingRange: 100
+  speed: 1000
+  minDistance: 2
+  maxDistance: 5
+  sensingRange: 20
   delta: {x: 0, y: 0, z: 0}
 --- !u!114 &8080149369076492920
 MonoBehaviour:
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b52baf6a9717478fc91a4b9af8469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  range: 5
   amount: 5
   coolDown: 1
   coolDownTimer: 0

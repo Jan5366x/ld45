@@ -13,6 +13,11 @@ public class Weapon : MonoBehaviour
 
     public void UseOn(Entity entity)
     {
+        if ((entity.transform.position - transform.position).magnitude > range)
+        {
+            return;
+        }
+
         if (coolDownTimer < 0)
         {
             entity.TakeDamage(this);

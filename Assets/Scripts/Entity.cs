@@ -16,7 +16,6 @@ public class Entity : MonoBehaviour
             damage = (int) (damage * armor.damagePercentage / 100f);
         }
 
-        Debug.Log("+++++"+armor+" "+ damage);
         if (damage > 0)
         {
             health -= damage;

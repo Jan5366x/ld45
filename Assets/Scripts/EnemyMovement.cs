@@ -40,11 +40,11 @@ public class EnemyMovement : MonoBehaviour
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
             if (delta.magnitude < minDistance)
             {
-                rigidbody.AddForce(-speed * delta);
+                rigidbody.AddForce(-speed * delta.normalized);
             }
             else if (delta.magnitude > maxDistance)
             {
-                rigidbody.AddForce(speed * delta);
+                rigidbody.AddForce(speed * delta.normalized);
             }
         }
     }
