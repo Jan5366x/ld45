@@ -5,12 +5,13 @@ public class Entity : MonoBehaviour
     public int health;
     public int maxHealth;
     public bool wasDead;
+    public bool isPlayer = false;
 
-    public void TakeDamage(Weapon weapon)
+    public void TakeDamage(int damage2)
     {
-        int damage = weapon.amount;
+        int damage = damage2;
         Armor armor = GetComponentInChildren<Armor>();
-        
+
         if (armor)
         {
             damage = (int) (damage * armor.damagePercentage / 100f);
@@ -28,6 +29,7 @@ public class Entity : MonoBehaviour
             {
                 animator.wrapMode = WrapMode.Once;
             }
+
             //TODO: Play some animations / sound / whatever
         }
     }
