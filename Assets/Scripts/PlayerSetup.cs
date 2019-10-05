@@ -11,14 +11,14 @@ public class PlayerSetup : MonoBehaviour
         {
             case 0:
                 // TODO: Spawn Reaper
-                // TODO: Spawn Player with armor
+                // TODO: Give armor to player
                 break;
             case 1:
                 // TODO: Spawn Reaper
-                // TODO: Spawn Player with sword
+                // TODO: Give sword to player
                 break;
             case 2:
-                // TODO: Spawn Player with naked
+                // TODO: Spawn player naked
                 break;
             default:
                 break;
