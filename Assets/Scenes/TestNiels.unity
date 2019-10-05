@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b52baf6a9717478fc91a4b9af8469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 7
   amount: 1
   coolDown: 3
   coolDownTimer: 0
@@ -487,7 +487,7 @@ PrefabInstance:
     - target: {fileID: 3688240404560103608, guid: 43a70aac262f2f0478756c7d69c439c9,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3688240404560103609, guid: 43a70aac262f2f0478756c7d69c439c9,
         type: 3}
@@ -698,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 3688240404560103608, guid: 43a70aac262f2f0478756c7d69c439c9,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43a70aac262f2f0478756c7d69c439c9, type: 3}
