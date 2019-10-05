@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 5200993383290983922}
   - component: {fileID: 5200993383290983924}
   - component: {fileID: 5200993383290983913}
-  - component: {fileID: 5200993383290983912}
+  - component: {fileID: 4216933820001676711}
+  - component: {fileID: 293656545665323761}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -166,7 +167,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &5200993383290983912
+--- !u!95 &4216933820001676711
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200993383290983921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c78760b0d3faf748afd871d9cf45331, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &293656545665323761
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +203,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.9, y: 10.9}
+    oldSize: {x: 0.59, y: 1.09}
     newSize: {x: 0.59, y: 1.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -191,24 +211,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.95, y: -0.45000002}
-      - {x: 2.8500001, y: 0.25}
-      - {x: 2.75, y: 3.55}
-      - {x: 2.05, y: 4.65}
-      - {x: 1.5500001, y: 5.35}
-      - {x: 1.0500001, y: 5.4500003}
-      - {x: -1.75, y: 5.4500003}
-      - {x: -2.55, y: 4.75}
-      - {x: -2.95, y: 4.05}
-      - {x: -2.95, y: 1.5500001}
-      - {x: -2.8500001, y: 0.75}
-      - {x: -2.95, y: -0.15}
-      - {x: -2.95, y: -2.45}
-      - {x: -2.75, y: -2.55}
-      - {x: -2.3500001, y: -5.4500003}
-      - {x: 2.15, y: -5.4500003}
-      - {x: 2.55, y: -4.85}
-      - {x: 2.95, y: -3.05}
+    - - {x: 0.295, y: -0.044999998}
+      - {x: 0.285, y: 0.024999999}
+      - {x: 0.275, y: 0.355}
+      - {x: 0.205, y: 0.465}
+      - {x: 0.155, y: 0.53499997}
+      - {x: 0.105, y: 0.545}
+      - {x: -0.175, y: 0.545}
+      - {x: -0.255, y: 0.475}
+      - {x: -0.295, y: 0.405}
+      - {x: -0.295, y: 0.155}
+      - {x: -0.285, y: 0.074999996}
+      - {x: -0.295, y: -0.015}
+      - {x: -0.295, y: -0.24499999}
+      - {x: -0.275, y: -0.255}
+      - {x: -0.235, y: -0.545}
+      - {x: 0.21499999, y: -0.545}
+      - {x: 0.255, y: -0.48499998}
+      - {x: 0.295, y: -0.305}
 --- !u!1 &5200993384873171471
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,3 +272,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7b775bb9556e64fa6238ad268a78a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  width: 200
+  height: 20
