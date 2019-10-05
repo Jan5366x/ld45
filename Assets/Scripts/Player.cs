@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
         {
             Weapon weapon = GetComponentInParent<Weapon>();
             float range = weapon ? weapon.range : 1;
-            Debug.Log("+++++" + range);
             var position = transform.position;
             Collider2D[] hitEntities = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y), range);
             foreach (var hitEntity in hitEntities)
@@ -26,7 +25,7 @@ public class Player : MonoBehaviour
                     Entity entity = hitEntity.gameObject.GetComponent<Entity>();
                     if (entity)
                     {
-                        entity.TakeDamage(weapon);
+                        weapon.UseOn(entity);
                     }
                 }
             }

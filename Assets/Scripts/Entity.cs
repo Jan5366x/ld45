@@ -11,7 +11,8 @@ public class Entity : MonoBehaviour
         health -= weapon.amount;
 
         Transform damageTaken = Resources.Load<Transform>("Objects/DamageTaken");
-        Instantiate(damageTaken, transform);
+        Transform newTransform = Instantiate(damageTaken, transform);
+        newTransform.Translate(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
         //TODO: Play some animations / sound / whatever
     }
 
@@ -48,16 +49,6 @@ public class Entity : MonoBehaviour
         {
             Die();
             return;
-        }
-    }
-
-    private void OnGUI()
-    {
-        if (!IsDead())
-        {
-            var pos = Camera.main.WorldToScreenPoint(transform.position);
-            Rect rect = new Rect(pos.x - 100, Camera.main.pixelHeight - pos.y, 200, 20);
-            IMUIHelper.DrawFilledBorderRect(rect, 1, health / (float) maxHealth, Color.red, Color.green);
         }
     }
 }
