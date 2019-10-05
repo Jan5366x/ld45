@@ -8,6 +8,36 @@ TextureImporter:
   - first:
       213: 1207058237316249908
     second: Human_Woman_A_1
+  - first:
+      213: 8563654873636957230
+    second: Human_Woman_A_2
+  - first:
+      213: 5957110091289257390
+    second: Human_Woman_A_3
+  - first:
+      213: -8626036703876293556
+    second: Human_Woman_A_4
+  - first:
+      213: -2172104823647525780
+    second: Human_Woman_A_5
+  - first:
+      213: -5974468871071368489
+    second: Human_Woman_A_6
+  - first:
+      213: 2469768107662260361
+    second: Human_Woman_A_7
+  - first:
+      213: -8452405438528655014
+    second: Human_Woman_A_8
+  - first:
+      213: -251718777381388352
+    second: Human_Woman_A_9
+  - first:
+      213: -7776933550855991356
+    second: Human_Woman_A_10
+  - first:
+      213: 529829131140538524
+    second: Human_Woman_A_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -130,7 +160,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38d7fb370185d5f49abcc78b747a8201
+      spriteID: 22a43e504c21e9d4881a7795af9f09df
       internalID: -668236434540834920
       vertices: []
       indices: 
@@ -151,8 +181,218 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea10ce41f4637a84fbe9726ab1259924
+      spriteID: dc133e09d5b1fca4b901b2662aee99b5
       internalID: 1207058237316249908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e63b1a5333bfc41a207b8b89b5fb9f
+      internalID: 8563654873636957230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba698be471de74f45bce731ac0093fd0
+      internalID: 5957110091289257390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ed2fb50ffaafc49a2430b6a19eaccb
+      internalID: -8626036703876293556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a85c85525040840af5a7ae30672796
+      internalID: -2172104823647525780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda3a549b51169e41ab7db1beef22c26
+      internalID: -5974468871071368489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918da462c648f1948b87c13e26b778e5
+      internalID: 2469768107662260361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67e2e847130739418d2579a6500c4d0
+      internalID: -8452405438528655014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b24608fffff844d8f3501e9343e5fd
+      internalID: -251718777381388352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf4e5689bed42841970bcc1debdfa53
+      internalID: -7776933550855991356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_Woman_A_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a083ecfb6fa1cf40a60a68b721cafae
+      internalID: 529829131140538524
       vertices: []
       indices: 
       edges: []
