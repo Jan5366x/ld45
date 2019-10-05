@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class SortingOrderScript : MonoBehaviour {
-
+public class SortingOrderScript : MonoBehaviour
+{
     public float offset;
-    
+
     void Awake()
     {
         SetPosition();
@@ -19,7 +19,6 @@ public class SortingOrderScript : MonoBehaviour {
 
     void SetPosition()
     {
-        GetComponent<SpriteRenderer>().sortingOrder = (int)-((transform.position.y + offset) * 100);
+        GetComponent<SpriteRenderer>().sortingOrder = (int) -((transform.position.y + offset) * 100);
     }
-
 }

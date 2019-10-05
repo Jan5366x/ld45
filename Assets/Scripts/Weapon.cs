@@ -35,6 +35,13 @@ public class Weapon : MonoBehaviour
     {
         if (used)
         {
+            Animator animator = GetComponent<Animator>();
+            if (animator)
+            {
+                animator.speed = 1 / coolDown;
+                animator.SetTrigger("OnHit");
+            }
+
             coolDownTimer = coolDown;
             used = false;
         }
