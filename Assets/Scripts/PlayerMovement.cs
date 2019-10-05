@@ -24,24 +24,32 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidbody.velocity = Vector2.zero;
         }
+    }
 
+    private void Update()
+    {
+        float vertical = Input.GetAxis("Vertical");
         bool forwards = vertical <= 0;
-        
-        foreach (Animator animators in GetComponentsInChildren<Animator>())
+
+        foreach (Animator animator in GetComponentsInChildren<Animator>())
         {
-            animators.SetBool("Forwards", forwards);
+            Debug.Log(animator.parameters);
+            animator.SetBool("Forwards", forwards);
         }
-        
+
 
         Weapon weapon = GetComponentInChildren<Weapon>();
 
-        if (forwards)
+        if (weapon)
         {
-            weapon.transform.SetParent(transform.Find("HandForwards"), false);
-        }
-        else
-        {
-            weapon.transform.SetParent(transform.Find("HandBackwards"), false);
+            if (forwards)
+            {
+                weapon.transform.SetParent(transform.Find("HandForwards"), false);
+            }
+            else
+            {
+                weapon.transform.SetParent(transform.Find("HandBackwards"), false);
+            }
         }
     }
 }

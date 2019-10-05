@@ -228,8 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
-  minDistance: 2
-  maxDistance: 5
+  minDistance: 1
+  maxDistance: 3
   sensingRange: 20
   delta: {x: 0, y: 0, z: 0}
 --- !u!114 &8080149369076492920
@@ -244,9 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b52baf6a9717478fc91a4b9af8469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 2
   amount: 5
-  coolDown: 1
+  coolDown: 4
   coolDownTimer: 0
   used: 0
 --- !u!114 &-5756736657515078459
