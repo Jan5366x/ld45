@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3688240404560103609}
   - component: {fileID: 3776270364945616183}
   - component: {fileID: 2979617846544933503}
+  - component: {fileID: 8080149369076492920}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -230,6 +231,23 @@ MonoBehaviour:
   maxDistance: 20
   sensingRange: 100
   delta: {x: 0, y: 0, z: 0}
+--- !u!114 &8080149369076492920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688240404560103610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2b52baf6a9717478fc91a4b9af8469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  amount: 5
+  coolDown: 1
+  coolDownTimer: 0
+  used: 0
 --- !u!1 &9133215776488097071
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,3 +291,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7b775bb9556e64fa6238ad268a78a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  width: 200
+  height: 20

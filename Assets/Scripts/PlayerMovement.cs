@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
 
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-        if (!Mathf.Approximately(vertical, 0f) || !Mathf.Approximately(horizontal, 0))
+        if (!Mathf.Approximately(vertical, 0f) || !Mathf.Approximately(horizontal, 0f))
         {
             rigidbody.velocity = new Vector2(horizontal, vertical) * movementSpeed;
         }
