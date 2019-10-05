@@ -119,10 +119,10 @@ TextureImporter:
       name: Human_Woman_A_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 7
-        width: 59
-        height: 109
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a15f3834721df94bb9ef4f7b73a34fd
+      spriteID: 38d7fb370185d5f49abcc78b747a8201
       internalID: -668236434540834920
       vertices: []
       indices: 
@@ -140,10 +140,10 @@ TextureImporter:
       name: Human_Woman_A_1
       rect:
         serializedVersion: 2
-        x: 165
-        y: 7
-        width: 59
-        height: 109
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d9d37f136eedd8438cf79129062d8a2
+      spriteID: ea10ce41f4637a84fbe9726ab1259924
       internalID: 1207058237316249908
       vertices: []
       indices: 
