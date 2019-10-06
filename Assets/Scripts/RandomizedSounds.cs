@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RandomizedSounds : MonoBehaviour
 {
@@ -7,6 +11,16 @@ public class RandomizedSounds : MonoBehaviour
     public static string MOVEMENT = "Audio/Movement";
     public static string SPOTTED = "Audio/Spotted";
     public RandomizedSound[] sounds;
+
+    private static Dictionary<string, int> lastPlayedSlots = new Dictionary<string, int>();
+
+    public static void TriggerUpdate()
+    {
+        foreach (var key in lastPlayedSlots.Keys.ToList())
+        {
+            lastPlayedSlots[key] = Mathf.Max(0, lastPlayedSlots[key] - 1);
+        }
+    }
 
     public void Play()
     {
@@ -24,7 +38,19 @@ public class RandomizedSounds : MonoBehaviour
         {
             if (totalWeight <= chosenSound && chosenSound < totalWeight + randomizedSound.weight)
             {
-                source.PlayOneShot(randomizedSound.clip);
+                source.Play();
+                string name = randomizedSound.clip.name;
+                if (!lastPlayedSlots.ContainsKey(name))
+                {
+                    lastPlayedSlots.Add(name, 0);
+                }
+
+                if (lastPlayedSlots[name] < 3)
+                {
+                    source.PlayOneShot(randomizedSound.clip);
+                    lastPlayedSlots[name]++;
+                }
+
                 break;
             }
 

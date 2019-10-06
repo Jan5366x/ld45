@@ -17,12 +17,18 @@ public class Player : MonoBehaviour
             Weapon weapon = GetComponentInChildren<Weapon>();
             if (weapon)
             {
+                bool used = false;
                 foreach (var entity in weapon.entitiesInRange)
                 {
                     if (entity.isPlayer)
                         continue;
 
-                    weapon.UseOn(entity);
+                    used |= weapon.UseOn(entity);
+                }
+
+                if (used)
+                {
+                    RandomizedSounds.Play(transform, RandomizedSounds.ATTACK);
                 }
 
                 // Draw animation even if we hit nothing
@@ -39,6 +45,4 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-
 }
