@@ -61,6 +61,11 @@ public class Entity : MonoBehaviour
             Instantiate(onDeathPrefab, transform.position, transform.rotation);
         }
 
+        if (isPlayer)
+        {
+            GameOverToggler.OnDeath();
+        }
+
         Destroy(gameObject);
         //TODO: Play some animations / sound / whatever
     }
