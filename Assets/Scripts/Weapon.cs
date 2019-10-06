@@ -4,23 +4,16 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public float range;
     public int amount;
     public float coolDown;
     public float coolDownTimer;
 
     public bool used;
 
+    public List<Entity> entitiesInRange = new List<Entity>();
+
     public void UseOn(Entity entity)
     {
-        if (entity)
-        {
-            if ((entity.transform.position - transform.position).magnitude > range)
-            {
-                return;
-            }
-        }
-
         if (coolDownTimer < 0)
         {
             if (entity)
@@ -32,12 +25,20 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        Entity entity = GetComponentInParent<Entity>();
+        if (entity)
+        {
+            entity.OnSwitchWeapon(this);
+        }
+        PlayerMovement player = GetComponentInParent<PlayerMovement>();
+        if (player)
+        {
+            player.OnSwitchWeapon();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (used)
@@ -54,5 +55,23 @@ public class Weapon : MonoBehaviour
         }
 
         coolDownTimer -= Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Entity otherEntity = other.GetComponent<Entity>();
+        if (otherEntity)
+        {
+            entitiesInRange.Add(otherEntity);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Entity otherEntity = other.GetComponent<Entity>();
+        if (otherEntity)
+        {
+            entitiesInRange.RemoveAll(entity => entity.Equals(otherEntity));
+        }
     }
 }

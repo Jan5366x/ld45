@@ -6,6 +6,7 @@ public class Entity : MonoBehaviour
     public int maxHealth;
     public bool wasDead;
     public bool isPlayer = false;
+    public Transform onDeathPrefab;
 
     public void TakeDamage(int damage2)
     {
@@ -51,6 +52,11 @@ public class Entity : MonoBehaviour
     private void Die()
     {
         wasDead = true;
+        if (onDeathPrefab)
+        {
+            Instantiate(onDeathPrefab, transform.position, transform.rotation);
+        }
+
         Destroy(gameObject);
         //TODO: Play some animations / sound / whatever
     }
@@ -67,6 +73,17 @@ public class Entity : MonoBehaviour
         {
             Die();
             return;
+        }
+    }
+
+    public void OnSwitchWeapon(Weapon newWeapon)
+    {
+        foreach (Weapon weapon in GetComponentsInChildren<Weapon>())
+        {
+            if (!weapon.Equals(newWeapon))
+            {
+                Destroy(weapon.gameObject);
+            }
         }
     }
 }
