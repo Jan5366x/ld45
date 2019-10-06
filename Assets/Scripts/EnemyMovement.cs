@@ -63,12 +63,18 @@ public class EnemyMovement : MonoBehaviour
             Weapon weapon = GetComponentInChildren<Weapon>();
             if (weapon)
             {
+                bool used = false;
                 foreach (var entity in weapon.entitiesInRange)
                 {
                     if (entity.isPlayer)
                     {
-                        weapon.UseOn(entity);
+                        used |= weapon.UseOn(entity);
                     }
+                }
+
+                if (used)
+                {
+                    RandomizedSounds.Play(transform, RandomizedSounds.ATTACK);
                 }
             }
         }

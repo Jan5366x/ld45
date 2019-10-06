@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
 
     public List<Entity> entitiesInRange = new List<Entity>();
 
-    public void UseOn(Entity entity)
+    public bool UseOn(Entity entity)
     {
         if (coolDownTimer < 0)
         {
@@ -24,7 +24,10 @@ public class Weapon : MonoBehaviour
             }
 
             used = true;
+            return true;
         }
+
+        return false;
     }
 
     private void Start()

@@ -35,6 +35,11 @@ public class Entity : MonoBehaviour
                 animator.wrapMode = WrapMode.Once;
             }
 
+            if (!isPlayer)
+            {
+                RandomizedSounds.Play(transform, RandomizedSounds.HURT);
+            }
+
             //TODO: Play some animations / sound / whatever
         }
     }
