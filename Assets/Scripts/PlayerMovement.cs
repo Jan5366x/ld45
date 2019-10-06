@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
+                RandomizedSounds.Play(transform, RandomizedSounds.MOVEMENT);
                 if (AnimationHelper.hasParameter(animator, IDLE))
                 {
                     animator.SetBool(IDLE, false);

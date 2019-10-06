@@ -842,10 +842,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - clip: {fileID: 8300000, guid: 63c60d2fa89dbeb4a903eb809c13990c, type: 3}
-    weight: 10
-  - clip: {fileID: 8300000, guid: 8c2baffbb22d6ca44b6fb2fb9db0fd68, type: 3}
-    weight: 5
-  - clip: {fileID: 8300000, guid: 25b08ad13b7f1bd46ba80e803e634537, type: 3}
     weight: 1
 --- !u!1 &6430061648670742277
 GameObject:
