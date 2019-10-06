@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1655763586702142037}
   - component: {fileID: 1655763586702142042}
   - component: {fileID: 1655763586702142043}
-  - component: {fileID: 1655763586702142040}
   - component: {fileID: 1655763586702142041}
+  - component: {fileID: 2443054935923286780}
   m_Layer: 0
   m_Name: LootWeapon
   m_TagString: Untagged
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a7ccd375b9c4fa341a8a28b4a340444e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be471fc2a243d5c498e1ceba47480059, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +104,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &1655763586702142040
+--- !u!114 &1655763586702142041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655763586702142046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8008d2f17b0624e8fe2de39a17dd6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 119073640256924106, guid: 380959ae2c38b9f4e865efd43c51dd37, type: 3}
+--- !u!60 &2443054935923286780
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,8 +133,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    pivot: {x: 0.5157604, y: 0.109366216}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -129,46 +142,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.42999998, y: -0.69}
-      - {x: 0.68, y: -0.66999996}
-      - {x: 0.84, y: -0.63}
-      - {x: 0.97999996, y: -0.53999996}
-      - {x: 1.1, y: -0.35999998}
-      - {x: 1.1, y: -0.26}
-      - {x: 1.0799999, y: -0.089999996}
-      - {x: 1.06, y: -0.04}
-      - {x: 0.97999996, y: 0.08}
-      - {x: 0.96999997, y: 0.22}
-      - {x: 0.87, y: 0.42}
-      - {x: 0.59999996, y: 0.59}
-      - {x: -0.12, y: 0.59}
-      - {x: -0.26999998, y: 0.59999996}
-      - {x: -0.56, y: 0.59999996}
-      - {x: -0.66999996, y: 0.56}
-      - {x: -0.79999995, y: 0.48999998}
-      - {x: -0.87, y: 0.42999998}
-      - {x: -0.93, y: 0.32999998}
-      - {x: -1.01, y: 0.07}
-      - {x: -1.01, y: -0.099999994}
-      - {x: -0.95, y: -0.37}
-      - {x: -0.90999997, y: -0.48999998}
-      - {x: -0.84, y: -0.65999997}
-      - {x: -0.77, y: -0.71}
-      - {x: -0.57, y: -0.78}
-      - {x: -0.19999999, y: -0.78}
-      - {x: -0.14999999, y: -0.76}
-      - {x: 0.07, y: -0.66999996}
-      - {x: 0.35999998, y: -0.65}
---- !u!114 &1655763586702142041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1655763586702142046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8008d2f17b0624e8fe2de39a17dd6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 119073640256924106, guid: 380959ae2c38b9f4e865efd43c51dd37, type: 3}
+    - - {x: 0.18982665, y: 0.45001125}
+      - {x: 0.09982666, y: 0.63001126}
+      - {x: 0.04982666, y: 0.6600113}
+      - {x: -0.14017333, y: 0.6600113}
+      - {x: -0.19017334, y: 0.47001123}
+      - {x: -0.24017334, y: 0.35001126}
+      - {x: -0.24017334, y: 0.060011253}
+      - {x: -0.16017334, y: -0.029988745}
+      - {x: 0.17982666, y: -0.029988745}
+      - {x: 0.24982665, y: 0.08001125}
+      - {x: 0.24982665, y: 0.25001124}

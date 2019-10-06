@@ -1,18 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    public int health;
-    public int maxHealth;
+    public float health;
+    public float maxHealth;
+    public float healingPerSecond;
     public bool wasDead;
     public bool isPlayer = false;
     public Transform onDeathPrefab;
     public Transform onDamagePrefab;
     public Rect splatterArea;
 
-    public void TakeDamage(int damage2)
+    public void TakeDamage(int damageReceived)
     {
-        int damage = damage2;
+        int damage = damageReceived;
         Armor armor = GetComponentInChildren<Armor>();
 
         if (armor)
@@ -37,7 +39,7 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public void Heal(int amount)
+    public void Heal(float amount)
     {
         health += amount;
         if (health > maxHealth)
@@ -66,9 +68,19 @@ public class Entity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine("AutomaticHealing");
         if (!onDamagePrefab)
         {
             onDamagePrefab = Resources.Load<Transform>("Objects/DamageTaken");
+        }
+    }
+
+    IEnumerator AutomaticHealing()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            Heal(healingPerSecond);
         }
     }
 
@@ -89,6 +101,17 @@ public class Entity : MonoBehaviour
             if (!weapon.Equals(newWeapon))
             {
                 Destroy(weapon.gameObject);
+            }
+        }
+    }
+
+    public void OnSwitchArmor(Armor newArmor)
+    {
+        foreach (Armor armor in GetComponentsInChildren<Armor>())
+        {
+            if (!armor.Equals(newArmor))
+            {
+                Destroy(armor.gameObject);
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Weapon : MonoBehaviour
     public float coolDownTimer;
 
     public bool used;
+    public Sprite previewImage;
 
     public List<Entity> entitiesInRange = new List<Entity>();
 
@@ -32,10 +34,14 @@ public class Weapon : MonoBehaviour
         {
             entity.OnSwitchWeapon(this);
         }
+
         PlayerMovement player = GetComponentInParent<PlayerMovement>();
         if (player)
         {
             player.OnSwitchWeapon();
+            GameObject swordImagePreview = GameObject.Find("SwordImagePreview");
+            Image image = swordImagePreview.GetComponent<Image>();
+            image.sprite = previewImage;
         }
     }
 
