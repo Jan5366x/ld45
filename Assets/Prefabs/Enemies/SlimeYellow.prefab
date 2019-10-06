@@ -107,7 +107,8 @@ MonoBehaviour:
   healingPerSecond: 0
   wasDead: 0
   isPlayer: 0
-  onDeathPrefab: {fileID: 0}
+  onDeathPrefab: {fileID: 6149120610238602322, guid: 16c1de9055ea619439e6a5e00e623dba,
+    type: 3}
   onDamagePrefab: {fileID: 3969266928571659900, guid: 61c94afbaffb1ac44bc91c2fa0226f83,
     type: 3}
   splatterArea:
