@@ -22,24 +22,26 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 delta = player.transform.position - transform.position;
-        if (delta.magnitude > 10)
+        if (player)
         {
-            isFollowing = true;
-        }
+            Vector3 delta = player.transform.position - transform.position;
+            if (delta.magnitude > 10)
+            {
+                isFollowing = true;
+            }
 
-        if (delta.magnitude < 3)
-        {
-            isFollowing = false;
-        }
+            if (delta.magnitude < 3)
+            {
+                isFollowing = false;
+            }
 
-        if (isFollowing)
-        {
+            if (isFollowing)
+            {
+                speedX = speed * delta.x * Time.deltaTime;
+                speedY = speed * delta.y * Time.deltaTime;
 
-            speedX = speed * delta.x * Time.deltaTime;
-            speedY = speed * delta.y * Time.deltaTime;
-
-            transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, 0);
+                transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, 0);
+            }
         }
     }
 }

@@ -7,7 +7,18 @@ public class PlayerHealthBar : MonoBehaviour
 
     private void OnGUI()
     {
-        Entity player = GameObject.Find("Player").GetComponentInChildren<Entity>();
-        slider.value = player.health / player.maxHealth;
+        GameObject playerObject = GameObject.Find("Player");
+        if (playerObject)
+        {
+            Entity player = playerObject.GetComponentInChildren<Entity>();
+            if (player)
+            {
+                slider.value = player.health / player.maxHealth;
+            }
+        }
+        else
+        {
+            slider.value = 0;
+        }
     }
 }
