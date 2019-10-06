@@ -100,6 +100,14 @@ MonoBehaviour:
   maxHealth: 100
   wasDead: 0
   isPlayer: 0
+  onDeathPrefab: {fileID: 0}
+  onDamagePrefab: {fileID: 0}
+  splatterArea:
+    serializedVersion: 2
+    x: -0.2
+    y: -0.2
+    width: 0.4
+    height: 0.4
 --- !u!60 &7866282198615977185
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -280,7 +288,49 @@ MonoBehaviour:
     countMax: 5
     prefab: {fileID: 3688240404560103614, guid: 43a70aac262f2f0478756c7d69c439c9,
       type: 3}
-    spawnerRange: {x: 15, y: 15}
+    spawnerRange: {x: 10, y: 10}
+  - delayMin: 3
+    delayMax: 10
+    countMin: 1
+    countMax: 5
+    prefab: {fileID: 3688240404560103614, guid: 7e2f9ef60eadcde40a0cb65f6c95a421,
+      type: 3}
+    spawnerRange: {x: 10, y: 10}
+  - delayMin: 3
+    delayMax: 10
+    countMin: 1
+    countMax: 5
+    prefab: {fileID: 3688240404560103614, guid: ef939031c9889ee4c866fe6c18a85fec,
+      type: 3}
+    spawnerRange: {x: 10, y: 10}
+  - delayMin: 3
+    delayMax: 10
+    countMin: 1
+    countMax: 5
+    prefab: {fileID: 3688240404560103614, guid: bca4776386a93ca449f175606ee11270,
+      type: 3}
+    spawnerRange: {x: 10, y: 10}
+  - delayMin: 3
+    delayMax: 10
+    countMin: 1
+    countMax: 5
+    prefab: {fileID: 3688240404560103614, guid: 481352604b111fa41813cd482e5c203c,
+      type: 3}
+    spawnerRange: {x: 10, y: 10}
+  - delayMin: 3
+    delayMax: 10
+    countMin: 1
+    countMax: 5
+    prefab: {fileID: 3688240404560103614, guid: 32c02a5e614c5cd4e953e6d604f39460,
+      type: 3}
+    spawnerRange: {x: 10, y: 10}
+  - delayMin: 3
+    delayMax: 10
+    countMin: 1
+    countMax: 5
+    prefab: {fileID: 3688240404560103614, guid: 7d6486b21cd374b4296470252ad90718,
+      type: 3}
+    spawnerRange: {x: 10, y: 10}
   playerInRange: 0
 --- !u!58 &8606252690692969942
 CircleCollider2D:

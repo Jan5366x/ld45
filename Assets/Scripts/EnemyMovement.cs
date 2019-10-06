@@ -5,9 +5,15 @@ public class EnemyMovement : MonoBehaviour
 {
     private GameObject _player;
 
-    public float speed;
+    public float speedNormal;
+    public float speedAggressive;
+    public bool isAggressive;
+    public float distanceChangedCount;
+    public float distanceChangeDuration;
+
+    public Vector3 targetPosition;
+
     public float minDistance;
-    public float maxDistance;
     public float sensingRange;
     public Vector3 delta;
 
@@ -22,31 +28,48 @@ public class EnemyMovement : MonoBehaviour
     void FixedUpdate()
     {
         LoadPlayer();
-        delta = _player.transform.position - transform.position;
+        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+        distanceChangedCount -= Time.deltaTime;
+
+        if (isAggressive)
+        {
+            targetPosition = _player.transform.position;
+        }
+        else
+        {
+            if (distanceChangedCount < 0)
+            {
+                targetPosition = transform.position + Random.onUnitSphere;
+                targetPosition.z = 0;
+                distanceChangedCount = distanceChangeDuration;
+            }
+        }
+
+
+        delta = targetPosition - transform.position;
         if (delta.magnitude < sensingRange)
         {
-            Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-            if (delta.magnitude < minDistance)
+            if (delta.magnitude > minDistance)
             {
-                rigidbody.AddForce(-speed * delta.normalized);
-            }
-            else if (delta.magnitude > maxDistance)
-            {
-                rigidbody.AddForce(speed * delta.normalized);
+                rigidbody.AddForce((isAggressive ? speedAggressive : speedNormal) * delta.normalized);
             }
         }
     }
 
     private void Update()
     {
-        LoadPlayer();
-        Weapon weapon = GetComponentInParent<Weapon>();
-        if (weapon)
+        if (isAggressive)
         {
-            Entity playerEntity = _player.GetComponent<Entity>();
-            if (playerEntity)
+            Weapon weapon = GetComponentInChildren<Weapon>();
+            if (weapon)
             {
-                weapon.UseOn(playerEntity);
+                foreach (var entity in weapon.entitiesInRange)
+                {
+                    if (entity.isPlayer)
+                    {
+                        weapon.UseOn(entity);
+                    }
+                }
             }
         }
     }

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public const String IDLE = "Idle";
+    public const String DIRECTION = "Direction";
+    public const String SHOW_RIGHT = "ShowRight";
     public float movementSpeed = 10;
     private bool forceIdleWeapon;
 
@@ -40,32 +43,32 @@ public class PlayerMovement : MonoBehaviour
         {
             if (idle)
             {
-                if (hasParameter(animator, "Idle"))
+                if (AnimationHelper.hasParameter(animator, IDLE))
                 {
-                    animator.SetBool("Idle", true);
+                    animator.SetBool(IDLE, true);
                 }
             }
             else
             {
-                if (hasParameter(animator, "Idle"))
+                if (AnimationHelper.hasParameter(animator, IDLE))
                 {
-                    animator.SetBool("Idle", false);
+                    animator.SetBool(IDLE, false);
                 }
 
-                if (hasParameter(animator, "Direction"))
+                if (AnimationHelper.hasParameter(animator, DIRECTION))
                 {
-                    animator.SetInteger("Direction", direction);
+                    animator.SetInteger(DIRECTION, direction);
                 }
 
-                if (hasParameter(animator, "ShowRight"))
+                if (AnimationHelper.hasParameter(animator, SHOW_RIGHT))
                 {
                     if (right)
                     {
-                        animator.SetBool("ShowRight", true);
+                        animator.SetBool(SHOW_RIGHT, true);
                     }
                     else
                     {
-                        animator.SetBool("ShowRight", false);
+                        animator.SetBool(SHOW_RIGHT, false);
                     }
                 }
             }
@@ -78,18 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    static bool hasParameter(Animator animator, String parameter)
-    {
-        foreach (var animatorControllerParameter in animator.parameters)
-        {
-            if (animatorControllerParameter.name.Equals(parameter))
-            {
-                return true;
-            }
-        }
 
-        return false;
-    }
 
     private void HandleWeapon(Weapon weapon, bool idle, int direction)
     {

@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
     public bool isPlayer = false;
     public Transform onDeathPrefab;
     public Transform onDamagePrefab;
+    public Rect splatterArea;
 
     public void TakeDamage(int damage2)
     {
@@ -24,7 +25,8 @@ public class Entity : MonoBehaviour
             health -= damage;
 
             Transform newTransform = Instantiate(onDamagePrefab, transform);
-            newTransform.Translate(Random.Range(-0.2f, 0.2f), Random.Range(-0.5f, 0.5f), 0);
+            newTransform.Translate(Random.Range(splatterArea.xMin, splatterArea.xMax),
+                Random.Range(splatterArea.yMin, splatterArea.yMax), 0);
             Animation animator = newTransform.GetComponent<Animation>();
             if (animator)
             {

@@ -265,6 +265,14 @@ MonoBehaviour:
   maxHealth: 1000
   wasDead: 0
   isPlayer: 1
+  onDeathPrefab: {fileID: 0}
+  onDamagePrefab: {fileID: 0}
+  splatterArea:
+    serializedVersion: 2
+    x: -0.2
+    y: -0.5
+    width: 0.4
+    height: 1
 --- !u!114 &5200993383290983923
 MonoBehaviour:
   m_ObjectHideFlags: 0
