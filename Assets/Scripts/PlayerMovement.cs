@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -38,12 +39,34 @@ public class PlayerMovement : MonoBehaviour
         {
             if (idle)
             {
-                animator.SetBool("Idle", true);
+                if (hasParameter(animator, "Idle"))
+                {
+                    animator.SetBool("Idle", true);
+                }
             }
             else
             {
-                animator.SetBool("Idle", false);
-                animator.SetInteger("Direction", direction);
+                if (hasParameter(animator, "Idle"))
+                {
+                    animator.SetBool("Idle", false);
+                }
+
+                if (hasParameter(animator, "Direction"))
+                {
+                    animator.SetInteger("Direction", direction);
+                }
+
+                if (hasParameter(animator, "ShowRight"))
+                {
+                    if (right)
+                    {
+                        animator.SetBool("ShowRight", true);
+                    }
+                    else
+                    {
+                        animator.SetBool("ShowRight", false);
+                    }
+                }
             }
 
             Debug.Log(animator.parameters);
@@ -74,9 +97,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Update()
+    static bool hasParameter(Animator animator, String parameter)
     {
-        float vertical = Input.GetAxis("Vertical");
-        bool forwards = vertical <= 0;
+        foreach (var animatorControllerParameter in animator.parameters)
+        {
+            if (animatorControllerParameter.name.Equals(parameter))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
