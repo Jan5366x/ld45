@@ -15,6 +15,8 @@ public class SlimeAggression : MonoBehaviour
             {
                 animator.SetBool(AGGRESSIVE, true);
             }
+
+            RandomizedSounds.Play(gameObject.transform.parent, RandomizedSounds.SPOTTED);
         }
     }
 
