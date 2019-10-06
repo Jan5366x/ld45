@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
     public bool wasDead;
     public bool isPlayer = false;
     public Transform onDeathPrefab;
+    public Transform onDamagePrefab;
 
     public void TakeDamage(int damage2)
     {
@@ -22,8 +23,7 @@ public class Entity : MonoBehaviour
         {
             health -= damage;
 
-            Transform damageTaken = Resources.Load<Transform>("Objects/DamageTaken");
-            Transform newTransform = Instantiate(damageTaken, transform);
+            Transform newTransform = Instantiate(onDamagePrefab, transform);
             newTransform.Translate(Random.Range(-0.2f, 0.2f), Random.Range(-0.5f, 0.5f), 0);
             Animation animator = newTransform.GetComponent<Animation>();
             if (animator)
@@ -64,6 +64,10 @@ public class Entity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!onDamagePrefab)
+        {
+            onDamagePrefab = Resources.Load<Transform>("Objects/DamageTaken");
+        }
     }
 
     // Update is called once per frame
