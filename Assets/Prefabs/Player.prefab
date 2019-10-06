@@ -262,7 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 1000
+  maxHealth: 100
+  healingPerSecond: 1
   wasDead: 0
   isPlayer: 1
   onDeathPrefab: {fileID: 0}

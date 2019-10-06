@@ -78,9 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
         Weapon weapon = GetComponentInChildren<Weapon>();
         HandleWeapon(weapon, idle, direction);
-
     }
-
 
 
     private void HandleWeapon(Weapon weapon, bool idle, int direction)
@@ -109,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             forceIdleWeapon = false;
         }
     }
-    
+
     public void OnSwitchWeapon()
     {
         forceIdleWeapon = true;

@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePercentage: 50
+  previewImage: {fileID: 21300000, guid: 98c2edc471360274380b018eafae1bbe, type: 3}
 --- !u!114 &-5832961629157721813
 MonoBehaviour:
   m_ObjectHideFlags: 0
