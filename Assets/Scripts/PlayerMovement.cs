@@ -72,8 +72,6 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
-
-            Debug.Log(animator.parameters);
         }
 
         Weapon weapon = GetComponentInChildren<Weapon>();
