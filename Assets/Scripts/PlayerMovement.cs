@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 10;
+    private bool forceIdleWeapon;
 
     // Start is called before the first frame update
     void Start()
@@ -73,10 +74,28 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Weapon weapon = GetComponentInChildren<Weapon>();
+        HandleWeapon(weapon, idle, direction);
 
+    }
+
+    static bool hasParameter(Animator animator, String parameter)
+    {
+        foreach (var animatorControllerParameter in animator.parameters)
+        {
+            if (animatorControllerParameter.name.Equals(parameter))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void HandleWeapon(Weapon weapon, bool idle, int direction)
+    {
         if (weapon)
         {
-            if (!idle)
+            if (!idle || forceIdleWeapon)
             {
                 switch (direction)
                 {
@@ -94,19 +113,13 @@ public class PlayerMovement : MonoBehaviour
                         break;
                 }
             }
+
+            forceIdleWeapon = false;
         }
     }
-
-    static bool hasParameter(Animator animator, String parameter)
+    
+    public void OnSwitchWeapon()
     {
-        foreach (var animatorControllerParameter in animator.parameters)
-        {
-            if (animatorControllerParameter.name.Equals(parameter))
-            {
-                return true;
-            }
-        }
-
-        return false;
+        forceIdleWeapon = true;
     }
 }

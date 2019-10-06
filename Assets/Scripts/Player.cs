@@ -17,24 +17,19 @@ public class Player : MonoBehaviour
             Weapon weapon = GetComponentInChildren<Weapon>();
             if (weapon)
             {
-                float range = weapon.range;
-                var position = transform.position;
-                Collider2D[] hitEntities = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y), range);
-                foreach (var hitEntity in hitEntities)
+                foreach (var entity in weapon.entitiesInRange)
                 {
-                    if (!hitEntity.gameObject.GetComponent<Player>())
-                    {
-                        Entity entity = hitEntity.gameObject.GetComponent<Entity>();
-                        if (entity)
-                        {
-                            weapon.UseOn(entity);
-                        }
-                    }
+                    if (entity.isPlayer)
+                        continue;
+
+                    weapon.UseOn(entity);
                 }
+
+                // Draw animation even if we hit nothing
                 weapon.UseOn(null);
             }
         }
-        
+
         if (Input.GetButtonDown("Fire2"))
         {
             Entity entity = GetComponentInParent<Entity>();
@@ -44,4 +39,6 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+
 }

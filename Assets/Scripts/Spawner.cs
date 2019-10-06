@@ -7,15 +7,6 @@ public class Spawner : MonoBehaviour
     public SpawnerWave[] waves;
     public bool playerInRange;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        foreach (var wave in waves)
-        {
-            StartCoroutine("SpawnPickups", wave);
-        }
-    }
-
     IEnumerator SpawnPickups(SpawnerWave item)
     {
         yield return new WaitForSeconds(Random.Range(item.delayMin, item.delayMax));
@@ -44,6 +35,10 @@ public class Spawner : MonoBehaviour
         if (other.gameObject.GetComponent<Player>())
         {
             playerInRange = true;
+            foreach (var wave in waves)
+            {
+                StartCoroutine("SpawnPickups", wave);
+            }
         }
     }
 
@@ -52,6 +47,7 @@ public class Spawner : MonoBehaviour
         if (other.gameObject.GetComponent<Player>())
         {
             playerInRange = false;
+            StopAllCoroutines();
         }
     }
 }

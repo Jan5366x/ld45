@@ -19,18 +19,6 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Weapon weapon = GetComponentInParent<Weapon>();
-
-        if (weapon)
-        {
-            Assert.IsTrue(weapon.range > minDistance);
-        }
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         LoadPlayer();
