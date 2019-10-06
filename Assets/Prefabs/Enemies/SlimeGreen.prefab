@@ -104,9 +104,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   maxHealth: 10
+  healingPerSecond: 0
   wasDead: 0
   isPlayer: 0
-  onDeathPrefab: {fileID: 0}
+  onDeathPrefab: {fileID: 6149120610238602322, guid: 16c1de9055ea619439e6a5e00e623dba,
+    type: 3}
   onDamagePrefab: {fileID: 3969266928571659900, guid: 61c94afbaffb1ac44bc91c2fa0226f83,
     type: 3}
   splatterArea:
@@ -323,6 +325,7 @@ MonoBehaviour:
   coolDown: 4
   coolDownTimer: 0
   used: 0
+  previewImage: {fileID: 0}
   entitiesInRange: []
 --- !u!58 &8965748876141059642
 CircleCollider2D:
@@ -385,3 +388,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 100
   height: 10
+  colorRemaining: {r: 0, g: 1, b: 0, a: 1}
+  colorBorder: {r: 0, g: 0, b: 0, a: 1}
