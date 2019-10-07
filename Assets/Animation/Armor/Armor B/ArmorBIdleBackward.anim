@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArmorAnimationForward
+  m_Name: ArmorBIdleBackward
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,12 +20,8 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 11559812818963850, guid: df761c686999de647a4d0395a4f91d13, type: 3}
-    - time: 0.25
-      value: {fileID: -1250139933272843140, guid: df761c686999de647a4d0395a4f91d13,
+      value: {fileID: -2489110761743628150, guid: 9e572f3ba513a65428f2d43bf36ab9db,
         type: 3}
-    - time: 0.5
-      value: {fileID: 11559812818963850, guid: df761c686999de647a4d0395a4f91d13, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -45,15 +41,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 11559812818963850, guid: df761c686999de647a4d0395a4f91d13, type: 3}
-    - {fileID: -1250139933272843140, guid: df761c686999de647a4d0395a4f91d13, type: 3}
-    - {fileID: 11559812818963850, guid: df761c686999de647a4d0395a4f91d13, type: 3}
+    - {fileID: -2489110761743628150, guid: 9e572f3ba513a65428f2d43bf36ab9db, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
