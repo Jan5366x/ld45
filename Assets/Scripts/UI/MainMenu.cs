@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour
     private static void LoadMainScene()
     {
         victory = false;
-        SceneManager.LoadScene("TestNiels");
+        SceneManager.LoadScene("MainGame");
     }
 
     public void PlaySword()
