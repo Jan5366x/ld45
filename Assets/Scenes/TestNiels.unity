@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150774120}
   - component: {fileID: 150774119}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: Grass_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}

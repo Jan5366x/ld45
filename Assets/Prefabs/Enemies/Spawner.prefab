@@ -238,55 +238,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - delayMin: 3
-    delayMax: 10
+  - delayMin: 1
+    delayMax: 5
     countMin: 1
-    countMax: 5
+    countMax: 2
     prefab: {fileID: 3688240404560103614, guid: 43a70aac262f2f0478756c7d69c439c9,
       type: 3}
-    spawnerRange: {x: 10, y: 10}
-  - delayMin: 3
-    delayMax: 10
-    countMin: 1
-    countMax: 5
+    spawnerRange: {x: 2, y: 2}
+  - delayMin: 2
+    delayMax: 4
+    countMin: 2
+    countMax: 4
     prefab: {fileID: 3688240404560103614, guid: 7e2f9ef60eadcde40a0cb65f6c95a421,
       type: 3}
-    spawnerRange: {x: 10, y: 10}
-  - delayMin: 3
-    delayMax: 10
+    spawnerRange: {x: 4, y: 4}
+  - delayMin: 1
+    delayMax: 2
     countMin: 1
-    countMax: 5
+    countMax: 3
     prefab: {fileID: 3688240404560103614, guid: ef939031c9889ee4c866fe6c18a85fec,
       type: 3}
-    spawnerRange: {x: 10, y: 10}
-  - delayMin: 3
+    spawnerRange: {x: 5, y: 5}
+  - delayMin: 5
     delayMax: 10
-    countMin: 1
-    countMax: 5
+    countMin: 3
+    countMax: 6
     prefab: {fileID: 3688240404560103614, guid: bca4776386a93ca449f175606ee11270,
       type: 3}
-    spawnerRange: {x: 10, y: 10}
-  - delayMin: 3
-    delayMax: 10
-    countMin: 1
-    countMax: 5
+    spawnerRange: {x: 5, y: 5}
+  - delayMin: 6
+    delayMax: 20
+    countMin: 4
+    countMax: 10
     prefab: {fileID: 3688240404560103614, guid: 481352604b111fa41813cd482e5c203c,
       type: 3}
-    spawnerRange: {x: 10, y: 10}
-  - delayMin: 3
-    delayMax: 10
-    countMin: 1
-    countMax: 5
+    spawnerRange: {x: 5, y: 5}
+  - delayMin: 2
+    delayMax: 5
+    countMin: 2
+    countMax: 4
     prefab: {fileID: 3688240404560103614, guid: 32c02a5e614c5cd4e953e6d604f39460,
       type: 3}
-    spawnerRange: {x: 10, y: 10}
-  - delayMin: 3
-    delayMax: 10
+    spawnerRange: {x: 5, y: 5}
+  - delayMin: 1
+    delayMax: 3
     countMin: 1
     countMax: 5
     prefab: {fileID: 3688240404560103614, guid: 7d6486b21cd374b4296470252ad90718,
       type: 3}
-    spawnerRange: {x: 10, y: 10}
+    spawnerRange: {x: 8, y: 8}
   playerInRange: 0
 --- !u!58 &8606252690692969942
 CircleCollider2D:
