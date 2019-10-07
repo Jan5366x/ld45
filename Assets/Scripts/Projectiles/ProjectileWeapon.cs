@@ -5,6 +5,10 @@ using UnityEngine;
 public class ProjectileWeapon : MonoBehaviour
 {
     public GameObject projectilePrefab;
+
+    public float coolDown;
+
+    public float coolDownCounter;
     // Start is called before the first frame update
 
     public void Fire()
@@ -14,9 +18,14 @@ public class ProjectileWeapon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        coolDownCounter -= Time.deltaTime;
+        if (coolDownCounter < 0)
         {
-            Fire();
+            if (Input.GetButtonDown("Jump"))
+            {
+                Fire();
+                coolDownCounter = coolDown;
+            }
         }
     }
 }

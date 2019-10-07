@@ -39,6 +39,7 @@ public class Spawner : MonoBehaviour
             {
                 StartCoroutine("SpawnPickups", wave);
             }
+            transform.parent.GetComponent<Animator>().SetBool("Active", true);
         }
     }
 
@@ -48,6 +49,7 @@ public class Spawner : MonoBehaviour
         {
             playerInRange = false;
             StopAllCoroutines();
+            transform.parent.GetComponent<Animator>().SetBool("Active", false);
         }
     }
 }
