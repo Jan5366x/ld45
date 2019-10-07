@@ -1,20 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
-    public float angle;
+    public Vector3 direction;
     public float speed;
-
-    private void Start()
-    {
-        Quaternion quat = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = quat;
-    }
 
     void Update()
     {
-        transform.Translate(Time.deltaTime * Vector3.right * speed);
+        transform.Translate(Time.deltaTime * direction * speed);
     }
 }

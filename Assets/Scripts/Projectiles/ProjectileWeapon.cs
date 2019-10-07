@@ -2,48 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileWeapon : MonoBehaviour
+public class ProjectileWeapon : AbstractWeapon
 {
     public GameObject projectilePrefab;
 
-    public float coolDown;
-    public float coolDownCounter;
-
-    public List<Entity> entitiesInRange = new List<Entity>();
-
-    public void Fire()
+    public override bool UseOn(Entity target)
     {
-        Instantiate(projectilePrefab, transform.position, transform.rotation);
-    }
-
-    private void Update()
-    {
-        coolDownCounter -= Time.deltaTime;
         if (coolDownCounter < 0)
         {
-            if (entitiesInRange.Count > 0)
+            if (target)
             {
-                Fire();
-                coolDownCounter = coolDown;
+                var transformPosition = target.transform.position;
+                var myPosition = transform.position;
+                Vector3 delta = new Vector3(transformPosition.x - myPosition.x, transformPosition.y - myPosition.y, 0);
+                GameObject projectileObject = Instantiate(projectilePrefab, myPosition, transform.rotation);
+                projectileObject.GetComponent<ProjectileMovement>().direction = delta.normalized;
+
+                Projectile projectile = projectileObject.GetComponentInChildren<Projectile>();
+                if (projectile)
+                {
+                    projectile.damagePlayer = target.isPlayer;
+                    projectile.damageEnemies = !target.isPlayer;
+                }
+
+                used = true;
+                return true;
             }
         }
+
+        return false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public override Animator GetAnimator()
     {
-        Entity otherEntity = other.GetComponent<Entity>();
-        if (otherEntity)
-        {
-            entitiesInRange.Add(otherEntity);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Entity otherEntity = other.GetComponent<Entity>();
-        if (otherEntity)
-        {
-            entitiesInRange.RemoveAll(entity => entity.Equals(otherEntity));
-        }
+        return GetComponentInParent<Animator>();
     }
 }

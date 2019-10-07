@@ -1,22 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Weapon : MonoBehaviour
+public class Weapon : AbstractWeapon
 {
     public int amount;
-    public float coolDown;
-    public float coolDownTimer;
-
-    public bool used;
     public Sprite previewImage;
 
-    public List<Entity> entitiesInRange = new List<Entity>();
-
-    public bool UseOn(Entity entity)
+    public override bool UseOn(Entity entity)
     {
-        if (coolDownTimer < 0)
+        if (coolDownCounter < 0)
         {
             if (entity)
             {
@@ -28,6 +20,11 @@ public class Weapon : MonoBehaviour
         }
 
         return false;
+    }
+
+    public override Animator GetAnimator()
+    {
+        return GetComponent<Animator>();
     }
 
     private void Start()
@@ -45,42 +42,6 @@ public class Weapon : MonoBehaviour
             GameObject swordImagePreview = GameObject.Find("SwordImagePreview");
             Image image = swordImagePreview.GetComponent<Image>();
             image.sprite = previewImage;
-        }
-    }
-
-    void Update()
-    {
-        if (used)
-        {
-            Animator animator = GetComponent<Animator>();
-            if (animator)
-            {
-                animator.speed = 1 / coolDown;
-                animator.SetTrigger("OnHit");
-            }
-
-            coolDownTimer = coolDown;
-            used = false;
-        }
-
-        coolDownTimer -= Time.deltaTime;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Entity otherEntity = other.GetComponent<Entity>();
-        if (otherEntity)
-        {
-            entitiesInRange.Add(otherEntity);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Entity otherEntity = other.GetComponent<Entity>();
-        if (otherEntity)
-        {
-            entitiesInRange.RemoveAll(entity => entity.Equals(otherEntity));
         }
     }
 }

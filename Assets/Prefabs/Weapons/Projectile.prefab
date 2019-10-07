@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01, y: 0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 0.3, y: 0.35}
   m_EdgeRadius: 0
 --- !u!114 &457527411265620003
 MonoBehaviour:
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4512c8ff080b1874c8fae597c4bfe321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 0
+  direction: {x: 0, y: 0, z: 0}
   speed: 1
 --- !u!114 &457527411265620004
 MonoBehaviour:
@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50919b13f0c50d4785520fb47d70124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePlayer: 0
-  damageEnemies: 1
-  damage: 10
+  damagePlayer: 1
+  damageEnemies: 0
+  damage: 30
   impactPrefab: {fileID: 3969266928571659900, guid: f6f68df19d9c6c14bb07a4a18e2fc8f3,
     type: 3}
 --- !u!114 &6494479193838825620
@@ -154,4 +154,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cecd31b1d88b624bb73bd4d8f202c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -1
+  groundOffset: 0

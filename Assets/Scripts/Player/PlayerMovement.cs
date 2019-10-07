@@ -8,11 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public const String SHOW_RIGHT = "ShowRight";
     public float movementSpeed = 10;
     private bool forceIdleWeapon;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    public int lastDirection = 0;
 
     // Update is called once per frame
     private void FixedUpdate()
@@ -72,15 +68,17 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool(SHOW_RIGHT, false);
                     }
                 }
+
+                lastDirection = direction;
             }
         }
 
-        Weapon weapon = GetComponentInChildren<Weapon>();
-        HandleWeapon(weapon, idle, direction);
+        AbstractWeapon weapon = GetComponentInChildren<AbstractWeapon>();
+        HandleWeapon(weapon, idle, idle ? lastDirection : direction);
     }
 
 
-    private void HandleWeapon(Weapon weapon, bool idle, int direction)
+    private void HandleWeapon(AbstractWeapon weapon, bool idle, int direction)
     {
         if (weapon)
         {
