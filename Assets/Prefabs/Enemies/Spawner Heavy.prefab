@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8396676035728370586}
   - component: {fileID: 1003803180368233673}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spawner Heavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,8 +254,8 @@ MonoBehaviour:
     spawnerRange: {x: 4, y: 4}
   - delayMin: 1
     delayMax: 2
-    countMin: 1
-    countMax: 3
+    countMin: 3
+    countMax: 5
     prefab: {fileID: 3688240404560103614, guid: ef939031c9889ee4c866fe6c18a85fec,
       type: 3}
     spawnerRange: {x: 5, y: 5}
@@ -280,9 +280,9 @@ MonoBehaviour:
     prefab: {fileID: 3688240404560103614, guid: 32c02a5e614c5cd4e953e6d604f39460,
       type: 3}
     spawnerRange: {x: 5, y: 5}
-  - delayMin: 1
-    delayMax: 3
-    countMin: 1
+  - delayMin: 4
+    delayMax: 12
+    countMin: 3
     countMax: 5
     prefab: {fileID: 3688240404560103614, guid: 7d6486b21cd374b4296470252ad90718,
       type: 3}

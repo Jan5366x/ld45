@@ -399,9 +399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c691a41a17f194aa62467a7411d4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
-  healingPerSecond: 0
+  health: 20
+  maxHealth: 20
+  healingPerSecond: 1
   wasDead: 0
   isPlayer: 0
   onDeathPrefab: {fileID: 6149120610238602322, guid: 16c1de9055ea619439e6a5e00e623dba,

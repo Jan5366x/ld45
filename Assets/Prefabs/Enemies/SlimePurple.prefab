@@ -930,8 +930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b52baf6a9717478fc91a4b9af8469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 5
-  coolDown: 4
+  amount: 1
+  coolDown: 1
   coolDownTimer: 0
   used: 0
   previewImage: {fileID: 0}

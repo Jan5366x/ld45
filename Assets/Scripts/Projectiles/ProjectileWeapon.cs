@@ -7,9 +7,9 @@ public class ProjectileWeapon : MonoBehaviour
     public GameObject projectilePrefab;
 
     public float coolDown;
-
     public float coolDownCounter;
-    // Start is called before the first frame update
+
+    public List<Entity> entitiesInRange = new List<Entity>();
 
     public void Fire()
     {
@@ -21,11 +21,29 @@ public class ProjectileWeapon : MonoBehaviour
         coolDownCounter -= Time.deltaTime;
         if (coolDownCounter < 0)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (entitiesInRange.Count > 0)
             {
                 Fire();
                 coolDownCounter = coolDown;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Entity otherEntity = other.GetComponent<Entity>();
+        if (otherEntity)
+        {
+            entitiesInRange.Add(otherEntity);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Entity otherEntity = other.GetComponent<Entity>();
+        if (otherEntity)
+        {
+            entitiesInRange.RemoveAll(entity => entity.Equals(otherEntity));
         }
     }
 }

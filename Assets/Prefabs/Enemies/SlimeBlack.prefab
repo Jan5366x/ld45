@@ -394,9 +394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c691a41a17f194aa62467a7411d4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
-  healingPerSecond: 0
+  health: 30
+  maxHealth: 30
+  healingPerSecond: 3
   wasDead: 0
   isPlayer: 0
   onDeathPrefab: {fileID: 6149120610238602322, guid: 16c1de9055ea619439e6a5e00e623dba,
@@ -442,13 +442,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08bb02c00adae0f40995814000378f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedNormal: 200
+  speedNormal: 100
   speedAggressive: 1000
   isAggressive: 0
   distanceChangedCount: 0
   distanceChangeDuration: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  minDistance: 0.9
+  minDistance: 1.1
   sensingRange: 20
   delta: {x: 0, y: 0, z: 0}
 --- !u!114 &-5756736657515078459
@@ -654,7 +654,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 3
 --- !u!1 &4963720213879316287
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,8 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b52baf6a9717478fc91a4b9af8469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 5
-  coolDown: 4
+  amount: 10
+  coolDown: 5
   coolDownTimer: 0
   used: 0
   previewImage: {fileID: 0}

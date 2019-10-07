@@ -61,7 +61,6 @@ public class RandomizedSounds : MonoBehaviour
     public static void Play(Transform baseObject, string soundSet)
     {
         Transform hurt = baseObject.transform.Find(soundSet);
-        Debug.Log("+++" + baseObject + " " + soundSet + " " + hurt);
         if (hurt)
         {
             hurt.GetComponent<RandomizedSounds>().Play();
