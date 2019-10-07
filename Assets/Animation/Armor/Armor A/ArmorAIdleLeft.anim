@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArmorIdleForward
+  m_Name: ArmorAIdleLeft
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 8630537716875263414, guid: df761c686999de647a4d0395a4f91d13,
+      value: {fileID: 6661320082788900437, guid: df761c686999de647a4d0395a4f91d13,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -41,7 +41,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 8630537716875263414, guid: df761c686999de647a4d0395a4f91d13, type: 3}
+    - {fileID: 6661320082788900437, guid: df761c686999de647a4d0395a4f91d13, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
