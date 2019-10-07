@@ -28,12 +28,14 @@ public class EnemyMovement : MonoBehaviour
     void FixedUpdate()
     {
         LoadPlayer();
-        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
         distanceChangedCount -= Time.deltaTime;
 
         if (isAggressive)
         {
-            targetPosition = _player.transform.position;
+            if (_player)
+            {
+                targetPosition = _player.transform.position;
+            }
         }
         else
         {
@@ -51,7 +53,11 @@ public class EnemyMovement : MonoBehaviour
         {
             if (delta.magnitude > minDistance)
             {
-                rigidbody.AddForce((isAggressive ? speedAggressive : speedNormal) * delta.normalized);
+                Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+                if (rigidbody)
+                {
+                    rigidbody.AddForce((isAggressive ? speedAggressive : speedNormal) * delta.normalized);
+                }
             }
         }
     }
@@ -73,7 +79,7 @@ public class EnemyMovement : MonoBehaviour
                     }
                 }
             }
-            
+
             if (used)
             {
                 RandomizedSounds.Play(transform, RandomizedSounds.ATTACK);
