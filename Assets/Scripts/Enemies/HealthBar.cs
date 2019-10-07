@@ -2,8 +2,8 @@
 
 public class HealthBar : MonoBehaviour
 {
-    public float width = 200;
-    public float height = 20;
+    public float width = 50;
+    public float height = 5;
     public Color colorRemaining = Color.green;
     public Color colorBorder = Color.black;
 
@@ -14,10 +14,13 @@ public class HealthBar : MonoBehaviour
             Entity entity = transform.parent.GetComponent<Entity>();
             if (entity)
             {
-                var pos = Camera.main.WorldToScreenPoint(transform.position);
-                Rect rect = new Rect(pos.x - width / 2, Camera.main.pixelHeight - pos.y, width, height);
-                IMUIHelper.DrawFilledBorderRect(rect, 1, entity.health / entity.maxHealth, colorBorder,
-                    colorRemaining);
+                if (!Mathf.Approximately(entity.health, entity.maxHealth))
+                {
+                    var pos = Camera.main.WorldToScreenPoint(transform.position);
+                    Rect rect = new Rect(pos.x - width / 2, Camera.main.pixelHeight - pos.y, width, height);
+                    IMUIHelper.DrawFilledBorderRect(rect, 1, entity.health / entity.maxHealth, colorBorder,
+                        colorRemaining);
+                }
             }
         }
     }
