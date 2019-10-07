@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GemCollectionMovement : MonoBehaviour
 {
@@ -12,11 +10,8 @@ public class GemCollectionMovement : MonoBehaviour
     public float fadeDelay = 1;
     public float fadeDelayCounter;
 
-    private GameObject _player;
-
     private void Start()
     {
-        _player = GameObject.FindWithTag("Player");
         fadeDelayCounter = fadeDelay;
     }
 
@@ -27,7 +22,16 @@ public class GemCollectionMovement : MonoBehaviour
         deltaY += delta;
 
         Vector3 pos = transform.position;
-        pos.y = Mathf.Max(_player.transform.position.y + deltaY, pos.y + delta);
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player)
+        {
+            pos.y = Mathf.Max(player.transform.position.y + deltaY, pos.y + delta);
+        }
+        else
+        {
+            pos.y = pos.y + delta;
+        }
+
         transform.position = pos;
 
         fadeDelayCounter -= Time.deltaTime;

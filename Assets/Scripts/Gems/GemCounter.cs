@@ -22,10 +22,21 @@ public class GemCounter : MonoBehaviour
             if (current <= total)
             {
                 text.text = "" + current;
-                current++;
+                if (total - current > 100)
+                {
+                    current += 10;
+                }
+                else if (total - current > 10)
+                {
+                    current += 2;
+                }
+                else
+                {
+                    current++;
+                }
             }
 
-            yield return new WaitForSeconds(1f/60f);
+            yield return new WaitForSeconds(1f / 60f);
         }
     }
 

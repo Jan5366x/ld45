@@ -7,7 +7,7 @@ public class PlayerSetup : MonoBehaviour
     public Transform SpawnSwordPrefab;
     public Transform SpawnKillerPrefab;
 
-    public static int damageMultiplier;
+    public static int damageMultiplier = 1;
 
     // Start is called before the first frame update
     void Start()

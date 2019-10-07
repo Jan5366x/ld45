@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     private const String CREDITS_STAGE = "Credits Stage";
 
     public static int choice;
+    public static bool victory;
 
     private void HideAllStages()
     {
@@ -44,6 +45,7 @@ public class MainMenu : MonoBehaviour
 
     private static void LoadMainScene()
     {
+        victory = false;
         SceneManager.LoadScene("TestNiels");
     }
 
