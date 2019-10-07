@@ -73,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 11559812818963850, guid: df761c686999de647a4d0395a4f91d13, type: 3}
+  m_Sprite: {fileID: -5824758281166948261, guid: 9e572f3ba513a65428f2d43bf36ab9db,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePercentage: 50
-  previewImage: {fileID: 21300000, guid: 98c2edc471360274380b018eafae1bbe, type: 3}
+  previewImage: {fileID: 21300000, guid: 10312cb300fc96f469c4c8ae158a4034, type: 3}
 --- !u!95 &9117693537959559355
 Animator:
   serializedVersion: 3
