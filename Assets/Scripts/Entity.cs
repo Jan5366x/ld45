@@ -15,6 +15,11 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int damageReceived)
     {
         int damage = damageReceived;
+        if (isPlayer)
+        {
+            damage *= PlayerSetup.damageMultiplier;
+        }
+
         Armor armor = GetComponentInChildren<Armor>();
 
         if (armor)
