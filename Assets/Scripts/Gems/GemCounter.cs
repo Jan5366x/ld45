@@ -31,6 +31,8 @@ public class GemCounter : MonoBehaviour
 
     private void Start()
     {
+        total = 0;
+        current = 0;
         text = GetComponent<TextMeshProUGUI>();
         StartCoroutine("UpdateCounter");
     }
