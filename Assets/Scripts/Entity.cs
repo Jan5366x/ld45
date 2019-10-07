@@ -63,7 +63,7 @@ public class Entity : MonoBehaviour
         return health <= 0;
     }
 
-    private void Die()
+    public void Die()
     {
         wasDead = true;
         if (onDeathPrefab)
