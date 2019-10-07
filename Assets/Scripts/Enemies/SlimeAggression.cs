@@ -5,6 +5,8 @@ public class SlimeAggression : MonoBehaviour
 {
     public const String AGGRESSIVE = "Aggressive";
 
+    public static int aggressionCounter = 0;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<PlayerMovement>())
@@ -17,6 +19,7 @@ public class SlimeAggression : MonoBehaviour
             }
 
             RandomizedSounds.Play(gameObject.transform.parent, RandomizedSounds.SPOTTED);
+            aggressionCounter++;
         }
     }
 
@@ -30,6 +33,8 @@ public class SlimeAggression : MonoBehaviour
             {
                 animator.SetBool(AGGRESSIVE, false);
             }
+
+            aggressionCounter--;
         }
     }
 }
