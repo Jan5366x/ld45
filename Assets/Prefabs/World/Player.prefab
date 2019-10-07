@@ -301,6 +301,7 @@ MonoBehaviour:
     type: 3}
   coolDown: 3
   coolDownCounter: 0
+  entitiesInRange: []
 --- !u!1 &2665509222380057358
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cecd31b1d88b624bb73bd4d8f202c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0
+  groundOffset: -0.51
 --- !u!70 &8086396073464454089
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

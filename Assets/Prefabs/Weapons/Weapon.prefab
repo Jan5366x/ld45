@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 119073640256924103}
   - component: {fileID: 119073640256924100}
   - component: {fileID: 119073640256924101}
-  - component: {fileID: -8435190073293028925}
   - component: {fileID: 5642021453146957949}
   - component: {fileID: -6413575036882583918}
   - component: {fileID: 4773851576998418673}
+  - component: {fileID: 6260899490141681680}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -103,19 +103,6 @@ MonoBehaviour:
   used: 0
   previewImage: {fileID: 21300000, guid: 98bc8266c6be34b49852f31f9443bf7a, type: 3}
   entitiesInRange: []
---- !u!114 &-8435190073293028925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119073640256924106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cecd31b1d88b624bb73bd4d8f202c06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -1
 --- !u!95 &5642021453146957949
 Animator:
   serializedVersion: 3
@@ -248,3 +235,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6260899490141681680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119073640256924106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7c79c6b5722c49a05ce32a278439b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childLayerOffset: 2
