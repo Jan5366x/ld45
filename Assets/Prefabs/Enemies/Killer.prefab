@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ee4268456854a4ab1e2f53819fe762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateDuration: 0.1
+  updateDuration: 0.5
   updateCounter: 0
 --- !u!1 &4033645502218913487
 GameObject:

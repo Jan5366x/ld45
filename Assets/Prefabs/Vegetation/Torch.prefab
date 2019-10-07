@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cecd31b1d88b624bb73bd4d8f202c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundOffset: 0.6
+  groundOffset: 0.12
 --- !u!212 &7864124711701066180
 SpriteRenderer:
   m_ObjectHideFlags: 0
