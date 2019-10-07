@@ -35,14 +35,5 @@ public class Player : MonoBehaviour
                 weapon.UseOn(null);
             }
         }
-
-        if (Input.GetButtonDown("Fire2"))
-        {
-            Entity entity = GetComponentInParent<Entity>();
-            if (entity)
-            {
-                entity.Heal(10);
-            }
-        }
     }
 }
