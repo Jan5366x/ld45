@@ -5,7 +5,16 @@ public class SplatterColorPicker : MonoBehaviour
     void Start()
     {
         SpriteRenderer splatter = GetComponent<SpriteRenderer>();
-        SpriteRenderer parent = transform.parent.GetComponent<SpriteRenderer>();
-        splatter.color = parent.color;
+        if (splatter)
+        {
+            if (transform.parent)
+            {
+                SpriteRenderer parent = transform.parent.GetComponent<SpriteRenderer>();
+                if (parent)
+                {
+                    splatter.color = parent.color;
+                }
+            }
+        }
     }
 }

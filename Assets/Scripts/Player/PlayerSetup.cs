@@ -5,6 +5,7 @@ public class PlayerSetup : MonoBehaviour
 {
     public Transform SpawnArmorPrefab;
     public Transform SpawnSwordPrefab;
+    public Transform SpawnKillerPrefab;
 
     public static int damageMultiplier;
 
@@ -15,11 +16,9 @@ public class PlayerSetup : MonoBehaviour
         {
             case 0:
                 SpawnArmor();
-                // TODO: Spawn Reaper
                 break;
             case 1:
                 SpawnSword();
-                // TODO: Spawn Reaper
                 break;
             case 2:
                 SpawnNaked();
@@ -36,14 +35,24 @@ public class PlayerSetup : MonoBehaviour
 
         GameObject player = GameObject.FindWithTag("Player");
         Instantiate(SpawnArmorPrefab, player.transform);
+        SpawnKiller(player);
     }
 
     private void SpawnSword()
     {
         damageMultiplier = 5;
 
-        GameObject playerObject = GameObject.FindWithTag("Player");
-        Instantiate(SpawnSwordPrefab, playerObject.transform);
+        GameObject player = GameObject.FindWithTag("Player");
+        Instantiate(SpawnSwordPrefab, player.transform);
+        SpawnKiller(player);
+    }
+
+    private void SpawnKiller(GameObject player)
+    {
+        Vector3 position = player.transform.position;
+        position += Random.insideUnitSphere * Random.Range(1, 5);
+        position.z = 0;
+        Instantiate(SpawnKillerPrefab, position, player.transform.rotation);
     }
 
     private void SpawnNaked()
