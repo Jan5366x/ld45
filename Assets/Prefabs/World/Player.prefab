@@ -299,6 +299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 457527411265620005, guid: a720f6c107ff2ef46bab5c0992b61cb5,
     type: 3}
+  coolDown: 3
+  coolDownCounter: 0
 --- !u!1 &2665509222380057358
 GameObject:
   m_ObjectHideFlags: 0
