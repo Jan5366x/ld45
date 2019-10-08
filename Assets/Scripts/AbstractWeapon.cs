@@ -8,6 +8,7 @@ public abstract class AbstractWeapon : MonoBehaviour
     public float coolDownCounter;
     public List<Entity> entitiesInRange = new List<Entity>();
     public bool used;
+    public Transform dropWeapon;
 
     public abstract bool UseOn(Entity entity);
     public abstract Animator GetAnimator();
@@ -47,4 +48,6 @@ public abstract class AbstractWeapon : MonoBehaviour
             entitiesInRange.RemoveAll(entity => entity.Equals(otherEntity));
         }
     }
+
+    public abstract void OnDrop();
 }

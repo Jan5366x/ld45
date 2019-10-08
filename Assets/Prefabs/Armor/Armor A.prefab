@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePercentage: 50
   previewImage: {fileID: 21300000, guid: 98c2edc471360274380b018eafae1bbe, type: 3}
+  dropArmor: {fileID: 8478638488548530818, guid: 6e72e94621f0ca245bab9990fd5e87dd,
+    type: 3}
 --- !u!95 &9117693537959559355
 Animator:
   serializedVersion: 3

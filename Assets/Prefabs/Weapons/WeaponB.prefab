@@ -101,6 +101,8 @@ MonoBehaviour:
   coolDownCounter: 0
   entitiesInRange: []
   used: 0
+  dropWeapon: {fileID: 7934278970177218559, guid: 964e7a832864c4646a4be6e335ad6a76,
+    type: 3}
   amount: 10
   previewImage: {fileID: 21300000, guid: 6a921c5092240944d91c73e21574feb2, type: 3}
 --- !u!95 &5642021453146957949

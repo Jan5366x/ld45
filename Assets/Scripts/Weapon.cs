@@ -27,6 +27,18 @@ public class Weapon : AbstractWeapon
         return GetComponent<Animator>();
     }
 
+    public override void OnDrop()
+    {
+        if (dropWeapon)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.x += Random.Range( -2.0f , 1.0f );
+            newPosition.y += Random.Range( -2.0f , 1.0f );
+            newPosition.z = 0;
+            Instantiate(dropWeapon, newPosition, transform.rotation);
+        }
+    }
+
     private void Start()
     {
         Entity entity = GetComponentInParent<Entity>();

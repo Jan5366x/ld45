@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4773851576998418673}
   - component: {fileID: 6260899490141681680}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: WeaponA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,12 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b52baf6a9717478fc91a4b9af8469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 3
   coolDown: 0.5
-  coolDownTimer: 0
-  used: 0
-  previewImage: {fileID: 21300000, guid: 98bc8266c6be34b49852f31f9443bf7a, type: 3}
+  coolDownCounter: 0
   entitiesInRange: []
+  used: 0
+  dropWeapon: {fileID: 8098850228864771970, guid: 8e169f4f4e13afe4ab9d4da8d7365bbe,
+    type: 3}
+  amount: 3
+  previewImage: {fileID: 21300000, guid: 98bc8266c6be34b49852f31f9443bf7a, type: 3}
 --- !u!95 &5642021453146957949
 Animator:
   serializedVersion: 3

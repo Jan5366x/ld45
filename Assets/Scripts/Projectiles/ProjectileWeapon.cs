@@ -37,4 +37,9 @@ public class ProjectileWeapon : AbstractWeapon
     {
         return GetComponentInParent<Animator>();
     }
+
+    public override void OnDrop()
+    {
+        
+    }
 }

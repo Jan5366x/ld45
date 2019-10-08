@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-
     public GameObject player;
-
 
     public bool isFollowing;
     public float speed;
     public float speedX;
     public float speedY;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (player)
         {
@@ -37,8 +29,9 @@ public class FollowPlayer : MonoBehaviour
 
             if (isFollowing)
             {
-                speedX = speed * delta.x * Time.deltaTime;
-                speedY = speed * delta.y * Time.deltaTime;
+                delta.Normalize();
+                speedX = speed * delta.x;
+                speedY = speed * delta.y;
 
                 transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, 0);
             }

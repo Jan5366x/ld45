@@ -115,6 +115,7 @@ public class Entity : MonoBehaviour
         {
             if (!weapon.Equals(newWeapon))
             {
+                weapon.OnDrop();
                 Destroy(weapon.gameObject);
             }
         }
@@ -126,6 +127,7 @@ public class Entity : MonoBehaviour
         {
             if (!armor.Equals(newArmor))
             {
+                armor.OnDrop();
                 Destroy(armor.gameObject);
             }
         }
