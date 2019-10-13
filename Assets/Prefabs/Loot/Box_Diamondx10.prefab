@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7220890189975471253}
   - component: {fileID: 7334701608152309946}
   m_Layer: 0
-  m_Name: Box_Diamond
+  m_Name: Box_Diamondx10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c691a41a17f194aa62467a7411d4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
-  maxHealth: 25
+  health: 20
+  maxHealth: 20
   healingPerSecond: 0
   wasDead: 0
   isPlayer: 0

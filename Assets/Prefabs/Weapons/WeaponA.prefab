@@ -103,7 +103,7 @@ MonoBehaviour:
   used: 0
   dropWeapon: {fileID: 8098850228864771970, guid: 8e169f4f4e13afe4ab9d4da8d7365bbe,
     type: 3}
-  amount: 3
+  amount: 5
   previewImage: {fileID: 21300000, guid: 98bc8266c6be34b49852f31f9443bf7a, type: 3}
 --- !u!95 &5642021453146957949
 Animator:

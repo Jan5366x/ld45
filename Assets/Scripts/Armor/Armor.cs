@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Armor : MonoBehaviour
@@ -32,11 +29,8 @@ public class Armor : MonoBehaviour
     {
         if (dropArmor)
         {
-            Vector3 newPosition = transform.position;
-            newPosition.x += Random.Range( -1.0f , 1.0f );
-            newPosition.y += Random.Range( -2.0f , 1.0f );
-            newPosition.z = 0;
-            Instantiate(dropArmor, newPosition, transform.rotation);
+            Instantiate(dropArmor,
+                LandHelper.ChooseLand(transform.position, new Rect(-1, -2, 2, 3)), transform.rotation);
         }
     }
 }

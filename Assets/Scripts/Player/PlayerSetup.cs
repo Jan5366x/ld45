@@ -12,6 +12,7 @@ public class PlayerSetup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Random.InitState(1337);
         switch (MainMenu.choice)
         {
             case 0:

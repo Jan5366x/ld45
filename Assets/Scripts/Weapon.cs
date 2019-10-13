@@ -31,11 +31,8 @@ public class Weapon : AbstractWeapon
     {
         if (dropWeapon)
         {
-            Vector3 newPosition = transform.position;
-            newPosition.x += Random.Range( -2.0f , 1.0f );
-            newPosition.y += Random.Range( -2.0f , 1.0f );
-            newPosition.z = 0;
-            Instantiate(dropWeapon, newPosition, transform.rotation);
+            Instantiate(dropWeapon, LandHelper.ChooseLand(transform.position, new Rect(-1, -2, 2, 3)),
+                transform.rotation);
         }
     }
 
