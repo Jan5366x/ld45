@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 613137383}
   - component: {fileID: 613137385}
   - component: {fileID: 613137384}
+  - component: {fileID: 1578776104}
   m_Layer: 5
   m_Name: WeaponDamageText
   m_TagString: Untagged
@@ -77,6 +78,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &1578776104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613137382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e25b54e0d82094c9dcff04c937ad91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &815240607
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +121,7 @@ RectTransform:
   m_Children:
   - {fileID: 613137383}
   m_Father: {fileID: 1989019792691525531}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -182,7 +195,7 @@ RectTransform:
   m_Children:
   - {fileID: 1525318783}
   m_Father: {fileID: 1989019792691525531}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -255,7 +268,7 @@ RectTransform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1989019792691525531}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -380,6 +393,7 @@ GameObject:
   - component: {fileID: 1525318783}
   - component: {fileID: 1525318785}
   - component: {fileID: 1525318784}
+  - component: {fileID: 1343122438}
   m_Layer: 5
   m_Name: WeaponSpeedText
   m_TagString: Untagged
@@ -446,6 +460,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &1343122438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525318782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4d64e279c8b1c479011d3303c070e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1773296204
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +483,7 @@ GameObject:
   - component: {fileID: 1773296205}
   - component: {fileID: 1773296207}
   - component: {fileID: 1773296206}
+  - component: {fileID: 107684213}
   m_Layer: 5
   m_Name: ArmorValueText
   m_TagString: Untagged
@@ -523,6 +550,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &107684213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773296204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed3f83754cc30a4f9153b7eee423628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1989019792417603325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,10 +1041,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1135205950}
   - {fileID: 1989019794016165193}
   - {fileID: 815240608}
   - {fileID: 1023992589}
-  - {fileID: 1135205950}
   m_Father: {fileID: 1989019792417603313}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2564,7 +2603,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1989019792691525531}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
