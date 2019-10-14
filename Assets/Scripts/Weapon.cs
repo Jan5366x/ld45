@@ -48,7 +48,7 @@ public class Weapon : AbstractWeapon
         if (player)
         {
             player.OnSwitchWeapon();
-            GameObject swordImagePreview = GameObject.Find("SwordImagePreview");
+            GameObject swordImagePreview = GameObject.Find("WeaponImagePreview");
             Image image = swordImagePreview.GetComponent<Image>();
             image.sprite = previewImage;
         }
